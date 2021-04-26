@@ -1,0 +1,52 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: rgb(36, 35, 35);
+    overflow: hidden;
+}
+.pelota{
+    top: 35%;
+    left: 35%;
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: yellowgreen;
+}
+.bote1{
+    animation: bote1 3.14s linear 0s infinite alternate,
+               rebota 3.14s linear 0s infinite alternate;
+
+}
+.bote2{
+    animation: bote2 1.03s ease-in 0s infinite alternate,
+               rebota 1.03s ease-in 0s infinite alternate;
+
+}
+
+@keyframes bote1{
+    from{
+        transform: translateX(0px);
+    }
+    to{
+        transform: translateX(500px);
+    }
+}
+@keyframes bote2{
+    from{
+        transform: translateY(0px);
+    }
+    to{
+        transform: translateY(500px);
+    }
+}
+
+@keyframes rebota {
+    0% {
+      bottom: 0;
+      height: 70px;
+    }
+    100% {
+      bottom: 400px;
+    }
+  }
